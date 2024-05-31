@@ -99,6 +99,11 @@ TEMPLATES = [
         },
     },
 ]
+# تنظیمات GraphQL
+GRAPHENE = {
+    "SCHEMA": "afagh_emdad.schema.schema",
+}
+
 # تنظیمات Simple JWT
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
