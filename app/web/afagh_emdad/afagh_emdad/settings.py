@@ -51,6 +51,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "rest_framework_simplejwt",
+    "corsheaders",
+]
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -99,6 +102,12 @@ SIMPLE_JWT = {
     "USER_ID_FIELD": "id",
     "USER_ID_CLAIM": "user_id",
 }
+# تنظیمات CORS
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
+
 # Database
 DATABASES = {
     "default": {
