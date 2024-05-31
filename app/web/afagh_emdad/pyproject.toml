@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "afagh-emdad-server-django"
+version = "0.1.0"
+description = ""
+authors = ["Abdollah Mohebbi <Abdollah.promail@gmail.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+psycopg2-binary = "^2.9.9"
+django = "^5.0.6"
+djangorestframework = "^3.15.1"
+djangorestframework-simplejwt = "^5.3.1"
+django-cors-headers = "^4.3.1"
+graphene-django = "^3.2.1"
+django-environ = "^0.11.2"
+psycopg2 = "^2.9.9"
+gunicorn = "^22.0.0"
+channels = "^4.1.0"
+channels-redis = "^4.2.0"
+geopy = "^2.4.1"
+kavenegar = "^1.1.2"
+mysqlclient = "^2.2.4"
+python-decouple = "^3.8"
+pytz = "^2024.1"
+setuptools = "^70.0.0"
+sqlparse = "^0.5.0"
+whitenoise = "^6.6.0"
+toml = "^0.10.2"
+
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+flake8 = "^7.0.0"
+isort = "^5.13.2"
+pylint = "^3.2.2"
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 88
+exclude = [
+    "migrations",
+    "__pycache__",
+    ".venv",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
