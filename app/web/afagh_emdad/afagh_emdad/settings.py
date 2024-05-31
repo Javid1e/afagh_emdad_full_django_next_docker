@@ -51,7 +51,17 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "rest_framework_simplejwt",
+    "graphene_django",
     "corsheaders",
+    "pwa",
+    "accounts",
+    "company",
+    "services",
+    "blog",
+    "help_requests",
+    "reviews",
+    "complaints",
+    "payments",
 ]
 
 MIDDLEWARE = [
