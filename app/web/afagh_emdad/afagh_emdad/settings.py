@@ -123,6 +123,8 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 
+WSGI_APPLICATION = "afagh_emdad.wsgi.application"
+
 # Database
 DATABASES = {
     "default": {
