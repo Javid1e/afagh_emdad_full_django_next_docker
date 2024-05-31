@@ -138,6 +138,9 @@ DATABASES = {
     }
 }
 
+# تنظیمات API Kavehnegar
+KAVEHNEGAR_API_KEY = env("KAVEHNEGAR_API_KEY")
+
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
