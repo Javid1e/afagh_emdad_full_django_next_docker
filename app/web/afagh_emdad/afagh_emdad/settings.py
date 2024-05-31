@@ -111,6 +111,22 @@ DATABASES = {
     }
 }
 
+# Database
+# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+
+# تنظیمات PWA
+PWA_APP_NAME = "Afagh Emdad"
+PWA_APP_DESCRIPTION = "Afagh Emdad - Roadside Assistance and Towing Service"
+PWA_APP_THEME_COLOR = "#000000"
+PWA_APP_BACKGROUND_COLOR = "#ffffff"
+PWA_APP_DISPLAY = "standalone"
+PWA_APP_SCOPE = "/"
+PWA_APP_START_URL = "/"
+PWA_APP_ICONS = [
+    {"src": "/static/images/icons/icon-192x192.png", "sizes": "192x192"},
+    {"src": "/static/images/icons/icon-512x512.png", "sizes": "512x512"},
+]
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, "static/js", "serviceworker.js")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
