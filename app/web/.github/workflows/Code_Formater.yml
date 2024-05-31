@@ -1,0 +1,44 @@
+name: Python application
+
+on: [ push, pull_request ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install Poetry
+        run: curl -sSL https://install.python-poetry.org | python3 -
+      - name: Install dependencies
+        run: |
+          poetry install
+      - name: Run Black
+        run: poetry run black .
+      - name: Run Flake8
+        run: poetry run flake8
+      - name: Run isort
+        run: poetry run isort  .
+      - name: Run pylint afagh_emdad
+        run: poetry run pylint afagh_emdad
+      - name: Run pylint accounts
+        run: poetry run pylint accounts
+      - name: Run pylint blog
+        run: poetry run pylint blog
+      - name: Run pylint company
+        run: poetry run pylint company
+      - name: Run pylint complaints
+        run: poetry run pylint complaints
+      - name: Run pylint help_requests
+        run: poetry run pylint help_requests
+      - name: Run pylint payments
+        run: poetry run pylint payments
+      - name: Run pylint reviews
+        run: poetry run pylint reviews
+      - name: Run pylint services
+        run: poetry run pylint services
+      - name: Run pylint afagh_emdad
+        run: poetry run pylint afagh_emdad
