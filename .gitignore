@@ -57,7 +57,7 @@ apps/web/*.pem
 
 # environment variables
 .env
-.env.*
+
 
 # local pyenv
 .python-version
